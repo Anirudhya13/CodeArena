@@ -1,7 +1,7 @@
-﻿using AlgoJudge.Application.Common.Models;
+using CodeArena.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace AlgoJudge.Infrastructure.Identity;
+namespace CodeArena.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {
@@ -12,3 +12,4 @@ public static class IdentityResultExtensions
             : Result.Failure(result.Errors.Select(e => e.Description));
     }
 }
+

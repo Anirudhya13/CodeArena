@@ -1,4 +1,4 @@
-namespace AlgoJudge.Domain.Events;
+namespace CodeArena.Domain.Events;
 
 public class CodeSubmissionCompletedEvent : BaseEvent
 {
@@ -9,3 +9,4 @@ public class CodeSubmissionCompletedEvent : BaseEvent
 
     public CodeSubmission Item { get; }
 }
+

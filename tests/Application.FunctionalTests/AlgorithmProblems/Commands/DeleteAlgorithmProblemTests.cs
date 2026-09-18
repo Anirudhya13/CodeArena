@@ -1,8 +1,8 @@
-using AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
-using AlgoJudge.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+using CodeArena.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.FunctionalTests.AlgorithmProblems.Commands;
+namespace CodeArena.Application.FunctionalTests.AlgorithmProblems.Commands;
 
 public class DeleteAlgorithmProblemTests : TestBase
 {
@@ -28,3 +28,4 @@ public class DeleteAlgorithmProblemTests : TestBase
         list.ShouldBeNull();
     }
 }
+

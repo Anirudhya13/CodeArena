@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Domain.Enums;
+namespace CodeArena.Domain.Enums;
 
 public enum PriorityLevel
 {
@@ -7,3 +7,4 @@ public enum PriorityLevel
     Medium = 2,
     High = 3
 }
+

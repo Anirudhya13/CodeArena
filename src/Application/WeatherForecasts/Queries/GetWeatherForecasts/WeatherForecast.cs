@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+namespace CodeArena.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public class WeatherForecast
 {
@@ -10,3 +10,4 @@ public class WeatherForecast
 
     public string Summary { get; init; } = string.Empty;
 }
+

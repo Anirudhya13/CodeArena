@@ -1,8 +1,8 @@
-﻿using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace AlgoJudge.Application.Common.Behaviours;
+namespace CodeArena.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest>
     where TRequest : notnull
@@ -29,7 +29,8 @@ public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest>
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("AlgoJudge Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation("CodeArena Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, request);
     }
 }
+

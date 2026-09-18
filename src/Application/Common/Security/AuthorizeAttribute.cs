@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Application.Common.Security;
+namespace CodeArena.Application.Common.Security;
 
 /// <summary>
 /// Specifies the class this attribute is applied to requires authorization.
@@ -21,3 +21,4 @@ public class AuthorizeAttribute : Attribute
     /// </summary>
     public string Policy { get; set; } = string.Empty;
 }
+

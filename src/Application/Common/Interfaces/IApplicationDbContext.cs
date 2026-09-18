@@ -1,6 +1,6 @@
-using AlgoJudge.Domain.Entities;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.Common.Interfaces;
+namespace CodeArena.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {
@@ -10,3 +10,4 @@ public interface IApplicationDbContext
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
+

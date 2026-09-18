@@ -1,10 +1,10 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 
-namespace AlgoJudge.Application.CodeSubmissions.Commands.EvaluateSubmission;
+namespace CodeArena.Application.CodeSubmissions.Commands.EvaluateSubmission;
 
 public record EvaluateSubmissionCommand(string Title, string Description, string Code, string Language, bool IsDraft = false) : IRequest<string>;
 
@@ -67,6 +67,7 @@ public class EvaluateSubmissionCommandHandler : IRequestHandler<EvaluateSubmissi
         return response;
     }
 }
+
 
 
 

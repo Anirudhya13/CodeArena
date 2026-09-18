@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.Pages;
+namespace CodeArena.Web.AcceptanceTests.Pages;
 
 public class CounterPage(IPage page) : BasePage(page)
 {
@@ -13,3 +13,4 @@ public class CounterPage(IPage page) : BasePage(page)
     public Task ClickIncrement()
         => Page.Locator("button:has-text('Increment')").ClickAsync();
 }
+

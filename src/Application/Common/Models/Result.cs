@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Application.Common.Models;
+namespace CodeArena.Application.Common.Models;
 
 public class Result
 {
@@ -22,3 +22,4 @@ public class Result
         return new Result(false, errors);
     }
 }
+

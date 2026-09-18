@@ -1,6 +1,6 @@
-using AlgoJudge.Application.Common.Models;
+using CodeArena.Application.Common.Models;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
+namespace CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
 
 public class ProblemsVm
 {
@@ -17,3 +17,4 @@ public class ColourDto
 
     public string Name { get; init; } = string.Empty;
 }
+

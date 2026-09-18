@@ -1,9 +1,9 @@
 using Microsoft.SemanticKernel;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Infrastructure.Data;
-using AlgoJudge.Infrastructure.Data.Interceptors;
-using AlgoJudge.Infrastructure.Identity;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Infrastructure.Data;
+using CodeArena.Infrastructure.Data.Interceptors;
+using CodeArena.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -56,7 +56,7 @@ public static class DependencyInjection
         var groqApiKey = builder.Configuration["Groq:ApiKey"];
         groqApiKey = string.IsNullOrWhiteSpace(groqApiKey) ? "dummy-key" : groqApiKey;
 
-        var httpClient = new HttpClient(new AlgoJudge.Infrastructure.AI.GroqEndpointHandler(new HttpClientHandler()));
+        var httpClient = new HttpClient(new CodeArena.Infrastructure.AI.GroqEndpointHandler(new HttpClientHandler()));
 
         builder.Services.AddKernel()
             .AddOpenAIChatCompletion(
@@ -64,9 +64,10 @@ public static class DependencyInjection
                 apiKey: groqApiKey,
                 httpClient: httpClient);
 
-        builder.Services.AddScoped<IAiJudgeService, AlgoJudge.Infrastructure.AI.SemanticKernelJudgeService>();
+        builder.Services.AddScoped<IAiJudgeService, CodeArena.Infrastructure.AI.SemanticKernelJudgeService>();
     }
 }
+
 
 
 

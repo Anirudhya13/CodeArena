@@ -1,7 +1,7 @@
-using AlgoJudge.Domain.Events;
+using CodeArena.Domain.Events;
 using Microsoft.Extensions.Logging;
 
-namespace AlgoJudge.Application.CodeSubmissions.EventHandlers;
+namespace CodeArena.Application.CodeSubmissions.EventHandlers;
 
 public class LogCodeSubmissionCompleted : INotificationHandler<CodeSubmissionCompletedEvent>
 {
@@ -14,8 +14,9 @@ public class LogCodeSubmissionCompleted : INotificationHandler<CodeSubmissionCom
 
     public Task Handle(CodeSubmissionCompletedEvent notification, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("AlgoJudge Domain Event: {DomainEvent}", notification.GetType().Name);
+        _logger.LogInformation("CodeArena Domain Event: {DomainEvent}", notification.GetType().Name);
 
         return Task.CompletedTask;
     }
 }
+

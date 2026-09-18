@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>AlgoJudge.Infrastructure.IntegrationTests</RootNamespace>
-        <AssemblyName>AlgoJudge.Infrastructure.IntegrationTests</AssemblyName>
+        <RootNamespace>CodeArena.Infrastructure.IntegrationTests</RootNamespace>
+        <AssemblyName>CodeArena.Infrastructure.IntegrationTests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,3 +20,4 @@
     </ItemGroup>
 
 </Project>
+

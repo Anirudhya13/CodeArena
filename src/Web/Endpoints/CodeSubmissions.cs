@@ -1,8 +1,8 @@
-using AlgoJudge.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
+using CodeArena.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
 using Microsoft.AspNetCore.Http.HttpResults;
 using MediatR;
 
-namespace AlgoJudge.Web.Endpoints;
+namespace CodeArena.Web.Endpoints;
 
 public class CodeSubmissions : IEndpointGroup
 {
@@ -22,14 +22,15 @@ public class CodeSubmissions : IEndpointGroup
     }
 
     [EndpointSummary("Evaluate Submission with AI Judge")]
-    public static async Task<string> EvaluateSubmission(ISender sender, [Microsoft.AspNetCore.Mvc.FromBody] AlgoJudge.Application.CodeSubmissions.Commands.EvaluateSubmission.EvaluateSubmissionCommand command)
+    public static async Task<string> EvaluateSubmission(ISender sender, [Microsoft.AspNetCore.Mvc.FromBody] CodeArena.Application.CodeSubmissions.Commands.EvaluateSubmission.EvaluateSubmissionCommand command)
     {
         return await sender.Send(command);
     }
 
     [EndpointSummary("Get current user submissions")]
-    public static async Task<List<AlgoJudge.Application.CodeSubmissions.Queries.GetUserSubmissions.SubmissionDto>> GetUserSubmissions(ISender sender)
+    public static async Task<List<CodeArena.Application.CodeSubmissions.Queries.GetUserSubmissions.SubmissionDto>> GetUserSubmissions(ISender sender)
     {
-        return await sender.Send(new AlgoJudge.Application.CodeSubmissions.Queries.GetUserSubmissions.GetUserSubmissionsQuery());
+        return await sender.Send(new CodeArena.Application.CodeSubmissions.Queries.GetUserSubmissions.GetUserSubmissionsQuery());
     }
 }
+

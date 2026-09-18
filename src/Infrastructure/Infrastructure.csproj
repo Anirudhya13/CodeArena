@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>AlgoJudge.Infrastructure</RootNamespace>
-    <AssemblyName>AlgoJudge.Infrastructure</AssemblyName>
+    <RootNamespace>CodeArena.Infrastructure</RootNamespace>
+    <AssemblyName>CodeArena.Infrastructure</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +36,7 @@
   </ItemGroup>
 
 </Project>
+
 
 
 

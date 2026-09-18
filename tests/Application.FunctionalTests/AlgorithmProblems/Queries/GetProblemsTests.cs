@@ -1,8 +1,8 @@
-using AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
-using AlgoJudge.Domain.Entities;
-using AlgoJudge.Domain.ValueObjects;
+using CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
+using CodeArena.Domain.Entities;
+using CodeArena.Domain.ValueObjects;
 
-namespace AlgoJudge.Application.FunctionalTests.AlgorithmProblems.Queries;
+namespace CodeArena.Application.FunctionalTests.AlgorithmProblems.Queries;
 
 public class GetProblemsTests : TestBase
 {
@@ -57,3 +57,4 @@ public class GetProblemsTests : TestBase
         await Should.ThrowAsync<UnauthorizedAccessException>(action);
     }
 }
+

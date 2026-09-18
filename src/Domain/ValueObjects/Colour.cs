@@ -1,4 +1,4 @@
-namespace AlgoJudge.Domain.ValueObjects;
+namespace CodeArena.Domain.ValueObjects;
 
 public class Colour(string code) : ValueObject
 {
@@ -64,3 +64,4 @@ public class Colour(string code) : ValueObject
         yield return Code;
     }
 }
+

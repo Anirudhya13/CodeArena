@@ -1,10 +1,10 @@
-﻿using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Domain.Common;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace AlgoJudge.Infrastructure.Data.Interceptors;
+namespace CodeArena.Infrastructure.Data.Interceptors;
 
 public class AuditableEntityInterceptor : SaveChangesInterceptor
 {
@@ -62,3 +62,4 @@ public static class Extensions
             r.TargetEntry.Metadata.IsOwned() && 
             (r.TargetEntry.State == EntityState.Added || r.TargetEntry.State == EntityState.Modified));
 }
+

@@ -1,6 +1,6 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+namespace CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
 
 public class CreateAlgorithmProblemCommandValidator : AbstractValidator<CreateAlgorithmProblemCommand>
 {
@@ -24,3 +24,4 @@ public class CreateAlgorithmProblemCommandValidator : AbstractValidator<CreateAl
             .AnyAsync(l => l.Title == title, cancellationToken);
     }
 }
+

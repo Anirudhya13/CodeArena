@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 
-namespace AlgoJudge.Infrastructure.Identity;
+namespace CodeArena.Infrastructure.Identity;
 
 public class ApplicationUser : IdentityUser
 {
 }
+

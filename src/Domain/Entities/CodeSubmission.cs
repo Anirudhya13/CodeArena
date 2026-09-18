@@ -1,4 +1,4 @@
-namespace AlgoJudge.Domain.Entities;
+namespace CodeArena.Domain.Entities;
 
 public class CodeSubmission : BaseAuditableEntity
 {
@@ -15,3 +15,4 @@ public class CodeSubmission : BaseAuditableEntity
     public string? TimeComplexity { get; set; }
     public string? SpaceComplexity { get; set; }
 }
+

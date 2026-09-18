@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.StepDefinitions;
+namespace CodeArena.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class LoginStepDefinitions(LoginPage loginPage)
@@ -50,3 +50,4 @@ public sealed class LoginStepDefinitions(LoginPage loginPage)
     [Then("an error is displayed")]
     public Task AnErrorIsDisplayed() => loginPage.AssertErrorVisible();
 }
+

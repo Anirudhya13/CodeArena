@@ -1,8 +1,8 @@
-﻿using System.Security.Claims;
+using System.Security.Claims;
 
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 
-namespace AlgoJudge.Web.Services;
+namespace CodeArena.Web.Services;
 
 public class CurrentUser : IUser
 {
@@ -17,3 +17,4 @@ public class CurrentUser : IUser
     public List<string>? Roles => _httpContextAccessor.HttpContext?.User?.FindAll(ClaimTypes.Role).Select(x => x.Value).ToList();
 
 }
+

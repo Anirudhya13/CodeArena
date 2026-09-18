@@ -1,4 +1,4 @@
-using AlgoJudge.Infrastructure.Data;
+using CodeArena.Infrastructure.Data;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,9 +40,10 @@ app.UseExceptionHandler(options => { });
 
 app.MapDefaultEndpoints();
 app.MapEndpoints(typeof(Program).Assembly);
-app.MapHub<AlgoJudge.Web.Hubs.SubmissionHub>("/hubs/submission");
+app.MapHub<CodeArena.Web.Hubs.SubmissionHub>("/hubs/submission");
 
 app.MapFallbackToFile("index.html");
 
 app.Run();
+
 

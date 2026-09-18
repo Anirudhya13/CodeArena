@@ -1,7 +1,7 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Domain.ValueObjects;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Domain.ValueObjects;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
+namespace CodeArena.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
 
 public record UpdateAlgorithmProblemCommand : IRequest
 {
@@ -38,3 +38,4 @@ public class UpdateAlgorithmProblemCommandHandler : IRequestHandler<UpdateAlgori
         await _context.SaveChangesAsync(cancellationToken);
     }
 }
+

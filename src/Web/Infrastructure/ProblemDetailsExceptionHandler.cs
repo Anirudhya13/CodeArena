@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Exceptions;
+using CodeArena.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AlgoJudge.Web.Infrastructure;
+namespace CodeArena.Web.Infrastructure;
 
 /// <summary>
 /// Converts well-known application exceptions into RFC 9110-compliant <see cref="ProblemDetails"/> responses,
@@ -50,3 +50,4 @@ public class ProblemDetailsExceptionHandler : IExceptionHandler
         return true;
     }
 }
+

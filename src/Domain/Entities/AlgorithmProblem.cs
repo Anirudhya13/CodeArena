@@ -1,4 +1,4 @@
-namespace AlgoJudge.Domain.Entities;
+namespace CodeArena.Domain.Entities;
 
 public class AlgorithmProblem : BaseAuditableEntity
 {
@@ -14,5 +14,6 @@ public class AlgorithmProblem : BaseAuditableEntity
 
     public IList<CodeSubmission> Submissions { get; private set; } = new List<CodeSubmission>();
 }
+
 
 

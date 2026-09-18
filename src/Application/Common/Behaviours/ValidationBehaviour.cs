@@ -1,6 +1,6 @@
-﻿using ValidationException = AlgoJudge.Application.Common.Exceptions.ValidationException;
+using ValidationException = CodeArena.Application.Common.Exceptions.ValidationException;
 
-namespace AlgoJudge.Application.Common.Behaviours;
+namespace CodeArena.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull
@@ -32,3 +32,4 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
         return await next();
     }
 }
+

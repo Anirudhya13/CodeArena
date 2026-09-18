@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.StepDefinitions;
+namespace CodeArena.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class HomeStepDefinitions(HomePage homePage)
@@ -25,3 +25,4 @@ public sealed class HomeStepDefinitions(HomePage homePage)
     [Then("the heading {string} is visible")]
     public Task ThenTheHeadingIsVisible(string text) => homePage.AssertHeading(text);
 }
+

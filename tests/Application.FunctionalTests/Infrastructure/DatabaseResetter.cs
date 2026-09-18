@@ -2,7 +2,7 @@ using Microsoft.Data.Sqlite;
 using Respawn;
 using System.Data.Common;
 
-namespace AlgoJudge.Application.FunctionalTests.Infrastructure;
+namespace CodeArena.Application.FunctionalTests.Infrastructure;
 
 internal sealed class DatabaseResetter : IAsyncDisposable
 {
@@ -34,3 +34,4 @@ internal sealed class DatabaseResetter : IAsyncDisposable
 
     public async ValueTask DisposeAsync() => await _connection.DisposeAsync();
 }
+

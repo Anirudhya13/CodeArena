@@ -1,9 +1,9 @@
-﻿<Project Sdk="Aspire.AppHost.Sdk/13.2.0">
+<Project Sdk="Aspire.AppHost.Sdk/13.2.0">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AlgoJudge.AppHost</RootNamespace>
-    <AssemblyName>AlgoJudge.AppHost</AssemblyName>
+    <RootNamespace>CodeArena.AppHost</RootNamespace>
+    <AssemblyName>CodeArena.AppHost</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,3 +19,4 @@
   </ItemGroup>
 
 </Project>
+

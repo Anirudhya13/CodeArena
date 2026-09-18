@@ -1,10 +1,10 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.Common.Models;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace AlgoJudge.Infrastructure.Identity;
+namespace CodeArena.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {
@@ -79,3 +79,4 @@ public class IdentityService : IIdentityService
         return result.ToApplicationResult();
     }
 }
+

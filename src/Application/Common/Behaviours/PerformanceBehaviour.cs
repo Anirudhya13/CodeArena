@@ -1,8 +1,8 @@
-﻿using System.Diagnostics;
-using AlgoJudge.Application.Common.Interfaces;
+using System.Diagnostics;
+using CodeArena.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace AlgoJudge.Application.Common.Behaviours;
+namespace CodeArena.Application.Common.Behaviours;
 
 public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull
@@ -45,10 +45,11 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
                 userName = await _identityService.GetUserNameAsync(userId);
             }
 
-            _logger.LogWarning("AlgoJudge Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
+            _logger.LogWarning("CodeArena Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
                 requestName, elapsedMilliseconds, userId, userName, request);
         }
 
         return response;
     }
 }
+

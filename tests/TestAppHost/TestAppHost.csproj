@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AlgoJudge.TestAppHost</RootNamespace>
-    <AssemblyName>AlgoJudge.TestAppHost</AssemblyName>
+    <RootNamespace>CodeArena.TestAppHost</RootNamespace>
+    <AssemblyName>CodeArena.TestAppHost</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,3 +16,4 @@
   </ItemGroup>
 
 </Project>
+

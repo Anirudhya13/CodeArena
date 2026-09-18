@@ -1,6 +1,6 @@
 using Aspire.Hosting;
 
-namespace AlgoJudge.Web.AcceptanceTests;
+namespace CodeArena.Web.AcceptanceTests;
 
 [SetUpFixture]
 public class AspireSetup
@@ -58,3 +58,4 @@ public class AspireSetup
         await App.DisposeAsync();
     }
 }
+

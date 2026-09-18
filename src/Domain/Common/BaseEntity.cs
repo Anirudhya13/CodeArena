@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AlgoJudge.Domain.Common;
+namespace CodeArena.Domain.Common;
 
 public abstract class BaseEntity
 {
@@ -28,3 +28,4 @@ public abstract class BaseEntity
         _domainEvents.Clear();
     }
 }
+

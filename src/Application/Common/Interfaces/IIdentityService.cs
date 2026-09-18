@@ -1,6 +1,6 @@
-﻿using AlgoJudge.Application.Common.Models;
+using CodeArena.Application.Common.Models;
 
-namespace AlgoJudge.Application.Common.Interfaces;
+namespace CodeArena.Application.Common.Interfaces;
 
 public interface IIdentityService
 {
@@ -14,3 +14,4 @@ public interface IIdentityService
 
     Task<Result> DeleteUserAsync(string userId);
 }
+

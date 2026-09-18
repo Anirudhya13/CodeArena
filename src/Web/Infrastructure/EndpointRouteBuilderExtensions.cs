@@ -1,6 +1,6 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 
-namespace AlgoJudge.Web.Infrastructure;
+namespace CodeArena.Web.Infrastructure;
 
 /// <summary>
 /// Extends <see cref="IEndpointRouteBuilder"/> with convenience overloads used inside
@@ -61,3 +61,4 @@ public static class EndpointRouteBuilderExtensions
             .WithName(handler.Method.Name);
     }
 }
+

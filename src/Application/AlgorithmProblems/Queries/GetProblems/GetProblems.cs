@@ -1,10 +1,10 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.Common.Models;
-using AlgoJudge.Application.Common.Security;
-using AlgoJudge.Domain.Enums;
-using AlgoJudge.Domain.ValueObjects;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.Common.Models;
+using CodeArena.Application.Common.Security;
+using CodeArena.Domain.Enums;
+using CodeArena.Domain.ValueObjects;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
+namespace CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
 
 [Authorize]
 public record GetProblemsQuery : IRequest<ProblemsVm>;
@@ -48,3 +48,4 @@ public class GetProblemsQueryHandler : IRequestHandler<GetProblemsQuery, Problem
         };
     }
 }
+

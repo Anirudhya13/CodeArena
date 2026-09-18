@@ -1,12 +1,12 @@
 using System.Runtime.CompilerServices;
 using AutoMapper;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
+using CodeArena.Domain.Entities;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 
-namespace AlgoJudge.Application.UnitTests.Common.Mappings;
+namespace CodeArena.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {
@@ -59,3 +59,4 @@ public class MappingTests
         _loggerFactory?.Dispose();
     }
 }
+

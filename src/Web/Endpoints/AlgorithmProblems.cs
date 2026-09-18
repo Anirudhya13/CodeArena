@@ -1,10 +1,10 @@
-using AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
-using AlgoJudge.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
-using AlgoJudge.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
-using AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
+using CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+using CodeArena.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
+using CodeArena.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
+using CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace AlgoJudge.Web.Endpoints;
+namespace CodeArena.Web.Endpoints;
 
 public class AlgorithmProblems : IEndpointGroup
 {
@@ -56,3 +56,4 @@ public class AlgorithmProblems : IEndpointGroup
         return TypedResults.NoContent();
     }
 }
+

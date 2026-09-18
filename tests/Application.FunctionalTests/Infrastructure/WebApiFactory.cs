@@ -1,18 +1,18 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace AlgoJudge.Application.FunctionalTests.Infrastructure;
+namespace CodeArena.Application.FunctionalTests.Infrastructure;
 
 public class WebApiFactory(string connectionString) : WebApplicationFactory<Program>
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder
-            .UseSetting("ConnectionStrings:AlgoJudgeDb", connectionString);
+            .UseSetting("ConnectionStrings:CodeArenaDb", connectionString);
 
         builder.ConfigureTestServices(services =>
         {
@@ -28,3 +28,4 @@ public class WebApiFactory(string connectionString) : WebApplicationFactory<Prog
         });
     }
 }
+

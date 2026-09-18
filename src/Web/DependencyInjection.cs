@@ -1,7 +1,7 @@
 using Azure.Identity;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Infrastructure.Data;
-using AlgoJudge.Web.Services;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Infrastructure.Data;
+using CodeArena.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microsoft.Extensions.DependencyInjection;
@@ -46,5 +46,6 @@ public static class DependencyInjection
         }
     }
 }
+
 
 

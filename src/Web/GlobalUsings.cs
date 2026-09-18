@@ -1,3 +1,4 @@
 global using Ardalis.GuardClauses;
-global using AlgoJudge.Web.Infrastructure;
+global using CodeArena.Web.Infrastructure;
 global using MediatR;
+

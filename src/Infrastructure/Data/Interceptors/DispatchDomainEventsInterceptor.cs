@@ -1,9 +1,9 @@
-﻿using AlgoJudge.Domain.Common;
+using CodeArena.Domain.Common;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace AlgoJudge.Infrastructure.Data.Interceptors;
+namespace CodeArena.Infrastructure.Data.Interceptors;
 
 public class DispatchDomainEventsInterceptor : SaveChangesInterceptor
 {
@@ -48,3 +48,4 @@ public class DispatchDomainEventsInterceptor : SaveChangesInterceptor
             await _mediator.Publish(domainEvent);
     }
 }
+

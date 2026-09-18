@@ -1,6 +1,7 @@
-﻿namespace AlgoJudge.Application.Common.Exceptions;
+namespace CodeArena.Application.Common.Exceptions;
 
 public class ForbiddenAccessException : Exception
 {
     public ForbiddenAccessException() : base() { }
 }
+

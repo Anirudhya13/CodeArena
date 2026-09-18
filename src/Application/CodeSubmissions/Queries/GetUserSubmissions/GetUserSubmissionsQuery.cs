@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace AlgoJudge.Application.CodeSubmissions.Queries.GetUserSubmissions;
+namespace CodeArena.Application.CodeSubmissions.Queries.GetUserSubmissions;
 
 public class SubmissionDto
 {
@@ -50,4 +50,5 @@ public class GetUserSubmissionsQueryHandler : IRequestHandler<GetUserSubmissions
             .ToListAsync(cancellationToken);
     }
 }
+
 

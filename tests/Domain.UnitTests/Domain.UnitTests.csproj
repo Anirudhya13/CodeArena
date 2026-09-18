@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>AlgoJudge.Domain.UnitTests</RootNamespace>
-        <AssemblyName>AlgoJudge.Domain.UnitTests</AssemblyName>
+        <RootNamespace>CodeArena.Domain.UnitTests</RootNamespace>
+        <AssemblyName>CodeArena.Domain.UnitTests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,3 +25,4 @@
     </ItemGroup>
 
 </Project>
+

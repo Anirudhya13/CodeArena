@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Exceptions;
-using AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.Common.Exceptions;
+using CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.FunctionalTests.AlgorithmProblems.Commands;
+namespace CodeArena.Application.FunctionalTests.AlgorithmProblems.Commands;
 
 public class CreateAlgorithmProblemTests : TestBase
 {
@@ -49,3 +49,4 @@ public class CreateAlgorithmProblemTests : TestBase
         list.Created.ShouldBe(DateTime.Now, TimeSpan.FromMilliseconds(10000));
     }
 }
+

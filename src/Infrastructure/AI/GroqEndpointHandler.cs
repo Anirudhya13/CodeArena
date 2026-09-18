@@ -1,4 +1,4 @@
-namespace AlgoJudge.Infrastructure.AI;
+namespace CodeArena.Infrastructure.AI;
 
 public class GroqEndpointHandler : System.Net.Http.DelegatingHandler
 {
@@ -12,4 +12,5 @@ public class GroqEndpointHandler : System.Net.Http.DelegatingHandler
         return base.SendAsync(request, cancellationToken);
     }
 }
+
 

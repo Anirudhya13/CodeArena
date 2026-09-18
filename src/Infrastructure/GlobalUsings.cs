@@ -1,2 +1,2 @@
-﻿global using Ardalis.GuardClauses;
-global using AlgoJudge.Shared;
+global using Ardalis.GuardClauses;
+global using CodeArena.Shared;

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace AlgoJudge.Web.AcceptanceTests;
+namespace CodeArena.Web.AcceptanceTests;
 
 [SetUpFixture]
 public class PlaywrightSetup
@@ -31,3 +31,4 @@ public class PlaywrightSetup
         _playwright?.Dispose();
     }
 }
+

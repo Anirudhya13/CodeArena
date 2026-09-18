@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.Pages;
+namespace CodeArena.Web.AcceptanceTests.Pages;
 
 public class LoginPage(IPage page) : BasePage(page)
 {
@@ -19,3 +19,4 @@ public class LoginPage(IPage page) : BasePage(page)
     public Task AssertErrorVisible()
         => Assertions.Expect(Page.Locator("#login-error")).ToBeVisibleAsync();
 }
+

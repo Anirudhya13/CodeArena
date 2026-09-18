@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.Pages;
+namespace CodeArena.Web.AcceptanceTests.Pages;
 
 public class WeatherPage(IPage page) : BasePage(page)
 {
@@ -13,3 +13,4 @@ public class WeatherPage(IPage page) : BasePage(page)
     public Task AssertRowCount(int count)
         => Assertions.Expect(Page.Locator("tbody tr")).ToHaveCountAsync(count);
 }
+

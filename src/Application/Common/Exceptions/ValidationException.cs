@@ -1,6 +1,6 @@
-﻿using FluentValidation.Results;
+using FluentValidation.Results;
 
-namespace AlgoJudge.Application.Common.Exceptions;
+namespace CodeArena.Application.Common.Exceptions;
 
 public class ValidationException : Exception
 {
@@ -20,3 +20,4 @@ public class ValidationException : Exception
 
     public IDictionary<string, string[]> Errors { get; }
 }
+

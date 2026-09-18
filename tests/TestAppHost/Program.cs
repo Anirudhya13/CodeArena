@@ -1,6 +1,6 @@
-using AlgoJudge.Shared;
+using CodeArena.Shared;
 
-namespace AlgoJudge.TestAppHost;
+namespace CodeArena.TestAppHost;
 
 public class Program
 {

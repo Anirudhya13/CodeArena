@@ -1,6 +1,6 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
+namespace CodeArena.Application.AlgorithmProblems.Commands.UpdateAlgorithmProblem;
 
 public class UpdateAlgorithmProblemCommandValidator : AbstractValidator<UpdateAlgorithmProblemCommand>
 {
@@ -25,3 +25,4 @@ public class UpdateAlgorithmProblemCommandValidator : AbstractValidator<UpdateAl
             .AnyAsync(l => l.Title == title, cancellationToken);
     }
 }
+

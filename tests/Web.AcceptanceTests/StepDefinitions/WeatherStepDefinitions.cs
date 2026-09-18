@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.StepDefinitions;
+namespace CodeArena.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class WeatherStepDefinitions(WeatherPage weatherPage)
@@ -39,3 +39,4 @@ public sealed class WeatherStepDefinitions(WeatherPage weatherPage)
     [Then("{int} weather forecasts are shown")]
     public Task ThenWeatherForecastsAreShown(int count) => weatherPage.AssertRowCount(count);
 }
+

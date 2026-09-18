@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.Pages;
+namespace CodeArena.Web.AcceptanceTests.Pages;
 
 public class HomePage(IPage page) : BasePage(page)
 {
@@ -7,3 +7,4 @@ public class HomePage(IPage page) : BasePage(page)
     public Task AssertHeading(string text)
         => Assertions.Expect(Page.Locator("h1")).ToHaveTextAsync(text);
 }
+

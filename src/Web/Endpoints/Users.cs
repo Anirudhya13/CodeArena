@@ -1,9 +1,9 @@
-﻿using AlgoJudge.Infrastructure.Identity;
+using CodeArena.Infrastructure.Identity;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AlgoJudge.Web.Endpoints;
+namespace CodeArena.Web.Endpoints;
 
 public class Users : IEndpointGroup
 {
@@ -27,3 +27,4 @@ public class Users : IEndpointGroup
         return TypedResults.Unauthorized();
     }
 }
+

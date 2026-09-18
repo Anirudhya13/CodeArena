@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AlgoJudge.Web": {
+    "CodeArena.Web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -75,11 +75,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AlgoJudge.Web:build:production"
+              "buildTarget": "CodeArena.Web:build:production"
             },
             "development": {
               "proxyConfig": "proxy.conf.js",
-              "buildTarget": "AlgoJudge.Web:build:development"
+              "buildTarget": "CodeArena.Web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "AlgoJudge.Web:build"
+            "buildTarget": "CodeArena.Web:build"
           }
         },
         "test": {

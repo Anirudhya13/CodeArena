@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace AlgoJudge.Web.Infrastructure;
+namespace CodeArena.Web.Infrastructure;
 
 public static class WebApplicationExtensions
 {
@@ -27,3 +27,4 @@ public static class WebApplicationExtensions
         return app;
     }
 }
+

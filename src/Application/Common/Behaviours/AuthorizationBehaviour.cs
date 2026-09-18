@@ -1,9 +1,9 @@
-﻿using System.Reflection;
-using AlgoJudge.Application.Common.Exceptions;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.Common.Security;
+using System.Reflection;
+using CodeArena.Application.Common.Exceptions;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.Common.Security;
 
-namespace AlgoJudge.Application.Common.Behaviours;
+namespace CodeArena.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
     where TRequest : notnull
@@ -78,3 +78,4 @@ public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRe
         return await next();
     }
 }
+

@@ -1,12 +1,12 @@
-using AlgoJudge.Domain.Constants;
-using AlgoJudge.Infrastructure.Data;
-using AlgoJudge.Infrastructure.Identity;
+using CodeArena.Domain.Constants;
+using CodeArena.Infrastructure.Data;
+using CodeArena.Infrastructure.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AlgoJudge.Application.FunctionalTests.Infrastructure;
+namespace CodeArena.Application.FunctionalTests.Infrastructure;
 
 public static class TestApp
 {
@@ -121,3 +121,4 @@ public static class TestApp
         return await context.Set<TEntity>().CountAsync();
     }
 }
+

@@ -1,6 +1,6 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
+namespace CodeArena.Application.AlgorithmProblems.Commands.DeleteAlgorithmProblem;
 
 public record DeleteAlgorithmProblemCommand(int Id) : IRequest;
 
@@ -26,3 +26,4 @@ public class DeleteAlgorithmProblemCommandHandler : IRequestHandler<DeleteAlgori
         await _context.SaveChangesAsync(cancellationToken);
     }
 }
+

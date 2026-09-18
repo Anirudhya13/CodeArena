@@ -5,7 +5,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://algojudge.dev.localhost:17180;http://algojudge.dev.localhost:15291",
+      "applicationUrl": "https://codearena.dev.localhost:17180;http://codearena.dev.localhost:15291",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DOTNET_ENVIRONMENT": "Development",
@@ -17,7 +17,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://algojudge.dev.localhost:15291",
+      "applicationUrl": "http://codearena.dev.localhost:15291",
       "environmentVariables": {
         "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
         "ASPNETCORE_ENVIRONMENT": "Development",
@@ -37,3 +37,4 @@
     }
   }
 }
+

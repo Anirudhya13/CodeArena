@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Domain.Constants;
+namespace CodeArena.Domain.Constants;
 
 public abstract class Roles
 {

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <RootNamespace>AlgoJudge.Application.FunctionalTests</RootNamespace>
-        <AssemblyName>AlgoJudge.Application.FunctionalTests</AssemblyName>
+        <RootNamespace>CodeArena.Application.FunctionalTests</RootNamespace>
+        <AssemblyName>CodeArena.Application.FunctionalTests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -38,3 +38,4 @@
     </ItemGroup>
 
 </Project>
+

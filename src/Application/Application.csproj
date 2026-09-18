@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>AlgoJudge.Application</RootNamespace>
-    <AssemblyName>AlgoJudge.Application</AssemblyName>
+    <RootNamespace>CodeArena.Application</RootNamespace>
+    <AssemblyName>CodeArena.Application</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,3 +21,4 @@
   </ItemGroup>
 
 </Project>
+

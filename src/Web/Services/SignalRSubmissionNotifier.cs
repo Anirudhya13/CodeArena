@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Web.Hubs;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Web.Hubs;
 using Microsoft.AspNetCore.SignalR;
 
-namespace AlgoJudge.Web.Services;
+namespace CodeArena.Web.Services;
 
 public class SignalRSubmissionNotifier : ISubmissionNotifier
 {
@@ -18,3 +18,4 @@ public class SignalRSubmissionNotifier : ISubmissionNotifier
         return _hubContext.Clients.User(userId).SendAsync("ReceiveStatus", status);
     }
 }
+

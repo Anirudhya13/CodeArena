@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Domain.Exceptions;
+namespace CodeArena.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {
@@ -7,3 +7,4 @@ public class UnsupportedColourException : Exception
     {
     }
 }
+

@@ -1,6 +1,6 @@
-using AlgoJudge.Domain.Entities;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Queries.GetProblems;
+namespace CodeArena.Application.AlgorithmProblems.Queries.GetProblems;
 
 public class CodeSubmissionDto
 {
@@ -16,3 +16,4 @@ public class CodeSubmissionDto
         }
     }
 }
+

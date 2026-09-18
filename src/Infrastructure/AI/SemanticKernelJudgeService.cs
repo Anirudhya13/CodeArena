@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 
-namespace AlgoJudge.Infrastructure.AI;
+namespace CodeArena.Infrastructure.AI;
 
 public class SemanticKernelJudgeService : IAiJudgeService
 {
@@ -26,10 +26,10 @@ public class SemanticKernelJudgeService : IAiJudgeService
             var chatCompletionService = _kernel.GetRequiredService<IChatCompletionService>();
 
             var systemPrompt = isHintRequest ? 
-                @"You are AlgoJudge, an expert AI mentor for a LeetCode-style platform. The user is stuck and has asked for a hint or solution.
+                @"You are CodeArena, an expert AI mentor for a LeetCode-style platform. The user is stuck and has asked for a hint or solution.
 Analyze their current code and provide what is requested."
                 :
-                @"You are AlgoJudge, an expert AI code evaluator for a LeetCode-style platform.
+                @"You are CodeArena, an expert AI code evaluator for a LeetCode-style platform.
 You must evaluate the user's code submission based on the problem description.
 Check for correctness, edge cases, and estimate the Big-O Time and Space complexity.
 Return a structured markdown response with:
@@ -147,4 +147,5 @@ Return a structured markdown response with:
         }
     }
 }
+
 

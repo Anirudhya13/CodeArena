@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <IsAspireSharedProject>true</IsAspireSharedProject>
-    <RootNamespace>AlgoJudge.ServiceDefaults</RootNamespace>
-    <AssemblyName>AlgoJudge.ServiceDefaults</AssemblyName>
+    <RootNamespace>CodeArena.ServiceDefaults</RootNamespace>
+    <AssemblyName>CodeArena.ServiceDefaults</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,3 +19,4 @@
   </ItemGroup>
 
 </Project>
+

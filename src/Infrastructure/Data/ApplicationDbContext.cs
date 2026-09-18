@@ -1,11 +1,11 @@
 using System.Reflection;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Domain.Entities;
-using AlgoJudge.Infrastructure.Identity;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Domain.Entities;
+using CodeArena.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AlgoJudge.Infrastructure.Data;
+namespace CodeArena.Infrastructure.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
@@ -21,3 +21,4 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }
+

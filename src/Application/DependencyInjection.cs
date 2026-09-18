@@ -1,5 +1,5 @@
-﻿using System.Reflection;
-using AlgoJudge.Application.Common.Behaviours;
+using System.Reflection;
+using CodeArena.Application.Common.Behaviours;
 using Microsoft.Extensions.Hosting;
 
 namespace Microsoft.Extensions.DependencyInjection;
@@ -23,3 +23,4 @@ public static class DependencyInjection
         });
     }
 }
+

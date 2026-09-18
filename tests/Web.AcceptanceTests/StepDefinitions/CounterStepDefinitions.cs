@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.StepDefinitions;
+namespace CodeArena.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class CounterStepDefinitions(CounterPage counterPage)
@@ -31,3 +31,4 @@ public sealed class CounterStepDefinitions(CounterPage counterPage)
     [When("the user clicks increment")]
     public Task WhenTheUserClicksIncrement() => counterPage.ClickIncrement();
 }
+

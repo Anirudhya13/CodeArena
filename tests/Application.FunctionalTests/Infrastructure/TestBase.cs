@@ -1,4 +1,4 @@
-namespace AlgoJudge.Application.FunctionalTests.Infrastructure;
+namespace CodeArena.Application.FunctionalTests.Infrastructure;
 
 public abstract class TestBase
 {
@@ -8,3 +8,4 @@ public abstract class TestBase
         await TestApp.ResetState();
     }
 }
+

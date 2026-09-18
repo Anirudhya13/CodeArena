@@ -1,4 +1,4 @@
-﻿namespace AlgoJudge.Application.Common.Interfaces;
+namespace CodeArena.Application.Common.Interfaces;
 
 public interface IUser
 {
@@ -6,3 +6,4 @@ public interface IUser
     List<string>? Roles { get; }
 
 }
+

@@ -1,9 +1,9 @@
-using AlgoJudge.Application.Common.Exceptions;
-using AlgoJudge.Application.CodeSubmissions.Commands.CreateCodeSubmission;
-using AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.Common.Exceptions;
+using CodeArena.Application.CodeSubmissions.Commands.CreateCodeSubmission;
+using CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.FunctionalTests.CodeSubmissions.Commands;
+namespace CodeArena.Application.FunctionalTests.CodeSubmissions.Commands;
 
 public class CreateCodeSubmissionTests : TestBase
 {
@@ -44,3 +44,4 @@ public class CreateCodeSubmissionTests : TestBase
         item.LastModified.ShouldBe(DateTime.Now, TimeSpan.FromMilliseconds(10000));
     }
 }
+

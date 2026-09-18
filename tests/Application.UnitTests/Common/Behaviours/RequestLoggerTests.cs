@@ -1,11 +1,11 @@
-using AlgoJudge.Application.Common.Behaviours;
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Application.CodeSubmissions.Commands.CreateCodeSubmission;
+using CodeArena.Application.Common.Behaviours;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Application.CodeSubmissions.Commands.CreateCodeSubmission;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace AlgoJudge.Application.UnitTests.Common.Behaviours;
+namespace CodeArena.Application.UnitTests.Common.Behaviours;
 
 public class RequestLoggerTests
 {
@@ -43,3 +43,4 @@ public class RequestLoggerTests
         _identityService.Verify(i => i.GetUserNameAsync(It.IsAny<string>()), Times.Never);
     }
 }
+

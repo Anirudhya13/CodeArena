@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+using System.Reflection;
 
-namespace AlgoJudge.Web.Infrastructure;
+namespace CodeArena.Web.Infrastructure;
 
 public static class MethodInfoExtensions
 {

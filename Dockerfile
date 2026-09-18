@@ -24,4 +24,5 @@ RUN dotnet publish "Web.csproj" -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "AlgoJudge.Web.dll"]
+ENTRYPOINT ["dotnet", "CodeArena.Web.dll"]
+

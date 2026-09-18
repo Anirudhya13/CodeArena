@@ -1,6 +1,6 @@
-using AlgoJudge.Domain.Entities;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.Common.Models;
+namespace CodeArena.Application.Common.Models;
 
 public class LookupDto
 {
@@ -17,3 +17,4 @@ public class LookupDto
         }
     }
 }
+

@@ -1,6 +1,6 @@
-using AlgoJudge.Application.Common.Interfaces;
+using CodeArena.Application.Common.Interfaces;
 
-namespace AlgoJudge.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
+namespace CodeArena.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
 
 public record DeleteCodeSubmissionCommand(int Id) : IRequest;
 
@@ -26,3 +26,4 @@ public class DeleteCodeSubmissionCommandHandler : IRequestHandler<DeleteCodeSubm
     }
 
 }
+

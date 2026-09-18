@@ -1,8 +1,8 @@
-using AlgoJudge.Application.Common.Interfaces;
-using AlgoJudge.Domain.Entities;
-using AlgoJudge.Domain.ValueObjects;
+using CodeArena.Application.Common.Interfaces;
+using CodeArena.Domain.Entities;
+using CodeArena.Domain.ValueObjects;
 
-namespace AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+namespace CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
 
 public record CreateAlgorithmProblemCommand : IRequest<int>
 {
@@ -35,3 +35,4 @@ public class CreateAlgorithmProblemCommandHandler : IRequestHandler<CreateAlgori
         return entity.Id;
     }
 }
+

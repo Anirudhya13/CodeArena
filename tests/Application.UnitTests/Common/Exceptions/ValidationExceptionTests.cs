@@ -1,9 +1,9 @@
-﻿using AlgoJudge.Application.Common.Exceptions;
+using CodeArena.Application.Common.Exceptions;
 using FluentValidation.Results;
 using NUnit.Framework;
 using Shouldly;
 
-namespace AlgoJudge.Application.UnitTests.Common.Exceptions;
+namespace CodeArena.Application.UnitTests.Common.Exceptions;
 
 public class ValidationExceptionTests
 {
@@ -61,3 +61,4 @@ public class ValidationExceptionTests
         }, ignoreOrder: true);
     }
 }
+

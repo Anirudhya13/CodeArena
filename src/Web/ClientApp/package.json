@@ -1,5 +1,5 @@
-﻿{
-  "name": "algojudge.web",
+{
+  "name": "codearena.web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -49,3 +49,4 @@
     "typescript": "~5.9.3"
   }
 }
+

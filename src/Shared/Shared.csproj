@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>AlgoJudge.Shared</RootNamespace>
-    <AssemblyName>AlgoJudge.Shared</AssemblyName>
+    <RootNamespace>CodeArena.Shared</RootNamespace>
+    <AssemblyName>CodeArena.Shared</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -12,3 +12,4 @@
   </PropertyGroup>
 
 </Project>
+

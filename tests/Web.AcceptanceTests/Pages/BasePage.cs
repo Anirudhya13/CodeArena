@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.AcceptanceTests.Pages;
+namespace CodeArena.Web.AcceptanceTests.Pages;
 
 public abstract class BasePage(IPage page)
 {
@@ -10,3 +10,4 @@ public abstract class BasePage(IPage page)
 
     public Task GotoAsync() => Page.GotoAsync(PagePath);
 }
+

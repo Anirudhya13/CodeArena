@@ -1,7 +1,7 @@
-using AlgoJudge.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+using CodeArena.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace AlgoJudge.Web.Endpoints;
+namespace CodeArena.Web.Endpoints;
 
 public class WeatherForecasts : IEndpointGroup
 {
@@ -21,3 +21,4 @@ public class WeatherForecasts : IEndpointGroup
         return TypedResults.Ok(forecasts);
     }
 }
+

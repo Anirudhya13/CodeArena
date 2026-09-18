@@ -1,13 +1,13 @@
-using AlgoJudge.Domain.Constants;
-using AlgoJudge.Domain.Entities;
-using AlgoJudge.Domain.ValueObjects;
-using AlgoJudge.Infrastructure.Identity;
+using CodeArena.Domain.Constants;
+using CodeArena.Domain.Entities;
+using CodeArena.Domain.ValueObjects;
+using CodeArena.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace AlgoJudge.Infrastructure.Data;
+namespace CodeArena.Infrastructure.Data;
 
 public static class InitialiserExtensions
 {
@@ -123,6 +123,7 @@ public class ApplicationDbContextInitialiser
         }
     }
 }
+
 
 
 

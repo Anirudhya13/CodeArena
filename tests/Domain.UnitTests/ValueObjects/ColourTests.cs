@@ -1,9 +1,9 @@
-using AlgoJudge.Domain.Exceptions;
-using AlgoJudge.Domain.ValueObjects;
+using CodeArena.Domain.Exceptions;
+using CodeArena.Domain.ValueObjects;
 using NUnit.Framework;
 using Shouldly;
 
-namespace AlgoJudge.Domain.UnitTests.ValueObjects;
+namespace CodeArena.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {
@@ -57,3 +57,4 @@ public class ColourTests
         (color1 == color3).ShouldBe(false);
     }
 }
+

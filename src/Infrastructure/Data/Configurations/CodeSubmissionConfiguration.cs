@@ -1,8 +1,8 @@
-using AlgoJudge.Domain.Entities;
+using CodeArena.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AlgoJudge.Infrastructure.Data.Configurations;
+namespace CodeArena.Infrastructure.Data.Configurations;
 
 public class CodeSubmissionConfiguration : IEntityTypeConfiguration<CodeSubmission>
 {
@@ -16,3 +16,4 @@ public class CodeSubmissionConfiguration : IEntityTypeConfiguration<CodeSubmissi
         builder.Property(s => s.UserId).HasMaxLength(450);
     }
 }
+

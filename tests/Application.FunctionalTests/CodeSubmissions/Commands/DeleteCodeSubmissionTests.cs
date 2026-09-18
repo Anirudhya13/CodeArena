@@ -1,9 +1,9 @@
-using AlgoJudge.Application.CodeSubmissions.Commands.CreateCodeSubmission;
-using AlgoJudge.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
-using AlgoJudge.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
-using AlgoJudge.Domain.Entities;
+using CodeArena.Application.CodeSubmissions.Commands.CreateCodeSubmission;
+using CodeArena.Application.CodeSubmissions.Commands.DeleteCodeSubmission;
+using CodeArena.Application.AlgorithmProblems.Commands.CreateAlgorithmProblem;
+using CodeArena.Domain.Entities;
 
-namespace AlgoJudge.Application.FunctionalTests.CodeSubmissions.Commands;
+namespace CodeArena.Application.FunctionalTests.CodeSubmissions.Commands;
 
 public class DeleteCodeSubmissionTests : TestBase
 {
@@ -36,3 +36,4 @@ public class DeleteCodeSubmissionTests : TestBase
         item.ShouldBeNull();
     }
 }
+

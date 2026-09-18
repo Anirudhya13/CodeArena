@@ -1,4 +1,4 @@
-namespace AlgoJudge.Web.Infrastructure;
+namespace CodeArena.Web.Infrastructure;
 
 /// <summary>
 /// Defines a group of related Minimal API endpoints.
@@ -17,3 +17,4 @@ public interface IEndpointGroup
 
     static abstract void Map(RouteGroupBuilder groupBuilder);
 }
+

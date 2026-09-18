@@ -1,4 +1,4 @@
-using AlgoJudge.Shared;
+using CodeArena.Shared;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -29,3 +29,4 @@ if (builder.ExecutionContext.IsRunMode)
 }
 
 builder.Build().Run();
+

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AlgoJudge.Application.FunctionalTests;
+namespace CodeArena.Application.FunctionalTests;
 
 [SetUpFixture]
 public class FunctionalTestSetup
@@ -53,3 +53,4 @@ public class FunctionalTestSetup
         if (_factory is not null) await _factory.DisposeAsync();
     }
 }
+

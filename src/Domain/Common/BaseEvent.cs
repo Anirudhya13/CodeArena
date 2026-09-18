@@ -1,7 +1,8 @@
-﻿using MediatR;
+using MediatR;
 
-namespace AlgoJudge.Domain.Common;
+namespace CodeArena.Domain.Common;
 
 public abstract class BaseEvent : INotification
 {
 }
+
