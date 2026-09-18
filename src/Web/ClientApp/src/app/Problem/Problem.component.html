@@ -1,0 +1,92 @@
+<div style="height: calc(100vh - 100px); width: 100%;">
+  <as-split direction="horizontal" [gutterSize]="8">
+    
+    <!-- Left Side: Problem List & Description -->
+    <as-split-area [size]="35">
+      <div style="padding: 1rem; height: 100%; overflow-y: auto;">
+        <h3>Problems</h3>
+        <nav>
+          <ul style="flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; padding: 0;">
+            <li *ngFor="let p of problems" style="margin-bottom: 0.5rem; list-style: none;">
+              <button [class.outline]="selectedProblem?.id !== p.id" (click)="selectProblem(p)">
+                {{ p.title }} ({{ p.difficulty }})
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <article *ngIf="selectedProblem" style="margin: 0;">
+          <header>
+            <h4 style="margin: 0;">{{ selectedProblem.title }}</h4>
+          </header>
+          <p style="white-space: pre-wrap; margin: 0;">{{ selectedProblem.description }}</p>
+        </article>
+        
+        <div *ngIf="problems.length === 0" aria-busy="true">
+          Loading algorithms...
+        </div>
+      </div>
+    </as-split-area>
+
+    <!-- Right Side: Editor & Output -->
+    <as-split-area [size]="65">
+      <div [style.display]="selectedProblem ? 'block' : 'none'" style="height: 100%;">
+        <as-split direction="vertical" [gutterSize]="8">
+          
+          <!-- Top Area: Editor -->
+          <as-split-area [size]="65">
+            <div style="display: flex; flex-direction: column; height: 100%; padding: 1rem;">
+              <div class="grid" style="align-items: center; margin-bottom: 1rem;">
+                <div>
+                  <select (change)="onLanguageChange($event)" style="margin-bottom: 0; min-width: 150px; max-width: 200px;">
+                    <option value="csharp">C#</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                  </select>
+                </div>
+                <div style="text-align: right; display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <button class="outline" (click)="getHint()" [disabled]="isEvaluating">{{ hintLevel >= 3 ? 'Get Solution' : 'Get Hint' }}</button>
+                  <button (click)="runTests()" [disabled]="isEvaluating" class="outline">Run Tests</button>
+                  <button class="outline" (click)="saveDraft()" [disabled]="isEvaluating">Save Draft</button>
+                  <button (click)="submitCode()" [disabled]="isEvaluating">Submit</button>
+                </div>
+              </div>
+              
+              <div #editorContainer style="flex-grow: 1; min-height: 200px; border: 1px solid var(--pico-muted-border-color); border-radius: 4px;"></div>
+            </div>
+          </as-split-area>
+          
+          <!-- Bottom Area: Output -->
+          <as-split-area [size]="35">
+            <div style="padding: 1rem; height: 100%; display: flex; flex-direction: column;">
+              
+              <!-- SignalR Live Status Indicator -->
+              <div *ngIf="isEvaluating" style="margin-bottom: 1rem; padding: 1rem; border-radius: 8px; background-color: var(--pico-mark-background-color); border: 1px solid var(--pico-muted-border-color);">
+                <div aria-busy="true" style="font-weight: bold; font-size: 1.1rem;">
+                  {{ evaluationStatus || 'Connecting to AI Judge...' }}
+                </div>
+              </div>
+              
+              <!-- Test Cases Tab -->
+              <div *ngIf="testResults.length > 0 && !isEvaluating" style="margin-bottom: 1rem; overflow-y: auto;">
+                <h5>Test Results</h5>
+                <article *ngFor="let tr of testResults; let i = index" class="stats-card" style="margin-bottom: 1rem; padding: 1rem;">
+                  <h6 style="margin-top: 0;">Case {{ i + 1 }} <span style="float: right; color: var(--pico-color);">{{ tr.time }}ms</span></h6>
+                  <p style="margin: 0; font-family: monospace; font-size: 0.9em;">Input: {{ tr.input }}</p>
+                  <p style="margin: 0; font-family: monospace; font-size: 0.9em;">Expected: {{ tr.expected }}</p>
+                </article>
+              </div>
+
+              <!-- Output Console -->
+              <pre style="flex-grow: 1; overflow-y: auto; margin: 0; min-height: 100px;"><code>{{ codeOutput || (isEvaluating ? '...' : 'Output will appear here...') }}</code></pre>
+            </div>
+          </as-split-area>
+          
+        </as-split>
+      </div>
+    </as-split-area>
+    
+  </as-split>
+</div>
+

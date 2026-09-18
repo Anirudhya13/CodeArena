@@ -1,0 +1,24 @@
+<header>
+  <nav>
+    <ul>
+      <li><a class="nav-brand" [routerLink]="['/']">CodeArena</a></li>
+    </ul>
+    <ul>
+      <li><a [routerLink]="['/']" [routerLinkActive]="['pico-active']" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a [routerLink]="['/Problem']" [routerLinkActive]="['pico-active']">Coding Workspace</a></li>
+    </ul>
+    <ul>
+      @if (isAuthenticated$ | async) {
+        <li><a [routerLink]="['/dashboard']" [routerLinkActive]="['pico-active']">Dashboard</a></li>
+        <li><a href="#" (click)="logout($event)">Log out</a></li>
+      } @else {
+        <li><a [routerLink]="['/login']" [routerLinkActive]="['pico-active']">Log in</a></li>
+        <li><a [routerLink]="['/register']" [routerLinkActive]="['pico-active']">Register</a></li>
+      }
+      <li aria-hidden="true" class="nav-separator"></li>
+      <li><app-theme-toggle /></li>
+    </ul>
+  </nav>
+</header>
+
+

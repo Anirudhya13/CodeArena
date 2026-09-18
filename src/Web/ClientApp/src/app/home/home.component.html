@@ -1,0 +1,21 @@
+<main class="container" style="text-align: center; margin-top: 3rem;">
+  <h1 style="font-size: 3rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">Welcome {{ userName ? userName + ',' : '' }} to <span style="color: var(--pico-primary);">CodeArena</span></h1>
+  <p style="font-size: 1.25rem; color: var(--pico-muted-color); margin-bottom: 2rem;">
+    Your ultimate real-time coding workspace and AI-powered judging platform.
+  </p>
+  
+  <article style="max-width: 800px; margin: 0 auto; text-align: left;">
+    <h3>Features</h3>
+    <ul>
+      <li><strong>AI-Powered Judge:</strong> Instantly evaluates your submissions for correctness, Time Complexity, and Space Complexity.</li>
+      <li><strong>Smart Hints:</strong> Get progressive hints from the AI when you're stuck, guiding you towards the optimal solution.</li>
+      <li><strong>Live Streaming:</strong> Watch real-time execution logs as your code compiles and runs against tests.</li>
+      <li><strong>Rich Workspace:</strong> Resizable split panes and Monaco Editor integration with seamless dark mode support.</li>
+    </ul>
+    
+    <div style="margin-top: 2rem; text-align: center;">
+      <a routerLink="/Problem" role="button">Enter the Arena</a>
+    </div>
+  </article>
+</main>
+

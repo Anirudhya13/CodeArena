@@ -1,0 +1,36 @@
+<article>
+  <h2>Register</h2>
+    @if (error) {
+    <article style="background-color: var(--pico-del-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+      <strong>Error:</strong> {{ error }}
+    </article>
+  }
+  @if (successMessage) {
+    <article style="background-color: var(--pico-ins-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+      <strong>Success:</strong> {{ successMessage }}
+    </article>
+  }
+  <form (ngSubmit)="register()">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email"
+      [attr.aria-invalid]="emailTouched ? !emailValid : null"
+      aria-describedby="email-helper"
+      autocomplete="username"
+      (blur)="emailTouched = true" />
+    <small id="email-helper">
+      {{ emailTouched && !emailValid ? 'Please enter a valid email address.' : '' }}
+    </small>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password"
+      [attr.aria-invalid]="passwordTouched ? !passwordValid : null"
+      aria-describedby="password-helper"
+      autocomplete="new-password"
+      (blur)="passwordTouched = true" />
+    <small id="password-helper">
+      {{ passwordTouched && !passwordValid ? 'Password must be at least ' + minPasswordLength + ' characters.' : '' }}
+    </small>
+    <button type="submit">Register</button>
+    <p style="margin-top: 1rem">Already have an account? <a [routerLink]="['/login']">Log in</a></p>
+  </form>
+</article>
+

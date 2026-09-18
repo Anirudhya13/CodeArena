@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    volumes:
+      - ./appdata:/app/data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - OpenAI__ApiKey=${OPENAI_API_KEY}
+      - Groq__ApiKey=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
+
+

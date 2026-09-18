@@ -1,0 +1,84 @@
+<main class="container">
+  <h1>My Dashboard</h1>
+
+  <div *ngIf="isLoading" aria-busy="true">Loading submissions...</div>
+
+  <div *ngIf="!isLoading">
+    <div class="grid">
+      <div>
+        <h3>Submission Stats</h3>
+        <article class="stats-card">
+          <div class="stat">
+            <span class="label">Total</span>
+            <span class="value">{{ submissions.length }}</span>
+          </div>
+          <div class="stat text-success">
+            <span class="label">Passed</span>
+            <span class="value">{{ passCount }}</span>
+          </div>
+          <div class="stat text-danger">
+            <span class="label">Failed</span>
+            <span class="value">{{ failCount }}</span>
+          </div>
+        </article>
+      </div>
+      <div>
+        <h3>Acceptance Rate</h3>
+        <article class="stats-card">
+          <h2 style="text-align: center; font-size: 3rem; margin: 0;">
+            {{ submissions.length > 0 ? (passCount / submissions.length * 100 | number:'1.0-1') : 0 }}%
+          </h2>
+        </article>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Recent Submissions</h3>
+    <figure>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Problem</th>
+            <th scope="col">Language</th>
+            <th scope="col">Code</th>
+            <th scope="col">Verdict</th>
+            <th scope="col">Time</th>
+            <th scope="col">Space</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sub of submissions">
+            <td>{{ sub.created | date:'short' }}</td>
+            <td>{{ sub.problemTitle }}</td>
+            <td>{{ sub.language }}</td>
+            <td><a href="javascript:void(0)" (click)="openCode(sub.code)">View Code</a></td>
+            <td>
+              <span [class.text-success]="sub.verdict.toLowerCase().includes('pass')" [class.text-danger]="!sub.verdict.toLowerCase().includes('pass')">
+                {{ sub.verdict }}
+              </span>
+            </td>
+            <td>{{ sub.timeComplexity || 'N/A' }}</td>
+            <td>{{ sub.spaceComplexity || 'N/A' }}</td>
+          </tr>
+          <tr *ngIf="submissions.length === 0">
+            <td colspan="7" style="text-align: center;">No submissions yet. Go solve a problem!</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </div>
+</main>
+
+
+<dialog [open]="selectedCode !== null">
+  <article style="max-width: 800px; width: 100%;">
+    <header>
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <strong>Submitted Code</strong>
+        <button aria-label="Close" (click)="closeCode()" style="width: auto; margin: 0; padding: 0.25rem 1rem;">Close</button>
+      </div>
+    </header>
+    <pre style="overflow: auto; max-height: 50vh;"><code>{{ selectedCode }}</code></pre>
+  </article>
+</dialog>
+
