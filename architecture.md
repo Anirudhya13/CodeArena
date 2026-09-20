@@ -1,17 +1,17 @@
 # CodeArena Architecture & Data Flow
 
-Bhai, yeh raha aapke CodeArena project ka complete Architecture Diagram. Isme clean architecture, WebSockets, aur AI integration ka pura flow dikhaya gaya hai.
+Welcome to the architectural documentation for CodeArena. This document outlines the application's clean architecture, WebSockets integration, and AI evaluation pipeline.
 
-```mermaid
+`mermaid
 flowchart TD
-  subgraph Frontend ["🖥️ Angular 18 (Client App)"]
+  subgraph Frontend ["??? Angular 18 (Client App)"]
     UI[UI / PicoCSS Dashboard]
     Editor[Monaco Code Editor]
     API_Client[NSwag HTTP Client]
     SignalR_Client[SignalR WebSockets]
   end
 
-  subgraph Backend ["⚙️ .NET 10 Backend (Clean Architecture)"]
+  subgraph Backend ["?? .NET 10 Backend (Clean Architecture)"]
     API[Web API Endpoints]
     CQRS[MediatR Command/Query]
     SignalR_Hub[Submission Hub]
@@ -19,11 +19,11 @@ flowchart TD
     EF[Entity Framework Core]
   end
 
-  subgraph Database ["💾 Local Storage"]
+  subgraph Database ["?? Local Storage"]
     SQLite[(SQLite Database)]
   end
 
-  subgraph External ["☁️ Cloud Services"]
+  subgraph External ["?? Cloud Services"]
     Groq[Groq API / Llama 3]
   end
 
@@ -49,25 +49,25 @@ flowchart TD
   style Backend fill:#1e1e1e,stroke:#8e44ad,stroke-width:2px,color:#fff
   style Database fill:#1e1e1e,stroke:#27ae60,stroke-width:2px,color:#fff
   style External fill:#1e1e1e,stroke:#f39c12,stroke-width:2px,color:#fff
-```
+`
 
-### 🧠 Kaun Kisse Connect Karta Hai (The Flow)
+### ?? Component Flow & Interactions
 
-Chalo isko ek real example (Code Submit karna) se samajhte hain:
+Here is a step-by-step breakdown of how the components interact when a user submits code:
 
 1. **User Input (Angular & Monaco):** 
-   User Monaco Editor (VS Code jaisa UI) mein apna solution likhta hai aur "Submit" dabata hai.
+   The user writes their algorithmic solution inside the Monaco Editor (the same core engine powering VS Code) and clicks "Submit".
 2. **Frontend to Backend (NSwag):** 
-   Angular ka `NSwag` client automatically us code ko uthata hai, JSON mein pack karta hai, aur backend (C# API) ko ek `HTTP POST` request bhejta hai.
+   The auto-generated Angular NSwag client bundles the code into a JSON payload and dispatches an HTTP POST request to the .NET Backend API.
 3. **Backend Processing (MediatR & Clean Architecture):** 
-   Request .NET API par aati hai. Humara backend **MediatR** (CQRS pattern) use karta hai. API seedha `EvaluateSubmissionCommand` ko kaam de deti hai.
-4. **Live Loading (SignalR WebSockets):** 
-   Jaise hi command start hoti hai, Backend ka **SignalR Hub** ek two-way connection (WebSocket) open rakhta hai. Yeh frontend ko chupke se live messages bhejta hai ("Compiling...", "Analyzing with AI..."). Frontend ka `SignalR_Client` usko pakad ke screen par live loading text change karta hai.
-5. **AI Magic (Semantic Kernel to Groq):** 
-   Command code ko `SemanticKernelJudgeService` ko bhejti hai. Semantic Kernel us code ko ek prompt ke sath **Groq API** (Llama 3) par internet ke through HTTP request bhejta hai. Groq code ko check karke result wapas C# backend ko deta hai.
-6. **Saving to DB (EF Core to SQLite):** 
-   C# backend Regex lagakar Groq ke answer (Pass/Fail) ko nikalta hai. Phir **Entity Framework (EF) Core** ko order deta hai ki "Is result ko save karo". EF Core SQL query banakar usko **SQLite Database** (`CodeArena.db`) mein likh deta hai.
+   The .NET Web API receives the request. Following the CQRS pattern via **MediatR**, the API immediately routes the payload to the EvaluateSubmissionCommand.
+4. **Real-Time Updates (SignalR WebSockets):** 
+   As the evaluation begins, the backend's **SignalR Hub** utilizes a persistent WebSocket connection to push live status messages ("Compiling...", "Analyzing with AI...") to the frontend, providing a seamless user experience.
+5. **AI Evaluation (Semantic Kernel to Groq):** 
+   The command delegates the actual evaluation to the SemanticKernelJudgeService. Semantic Kernel wraps the user's code inside a highly specific system prompt and transmits it to the **Groq API** (running Llama 3) for lightning-fast inference.
+6. **Persistence (EF Core to SQLite):** 
+   Upon receiving the AI's response, the C# backend parses the final verdict (Pass/Fail) and Time/Space complexities. It then instructs **Entity Framework (EF) Core** to persist the result. EF Core generates the necessary SQL queries and commits the record to the **SQLite Database** (CodeArena.db).
 7. **Final UI Update:** 
-   Backend frontend ko HTTP request ka final success response deta hai, aur user ke dashboard par green/red tick aa jata hai!
+   The backend returns the final HTTP success response to the frontend, updating the user's dashboard with the final verdict and performance metrics.
 
-Bhai, yeh architecture bilkul enterprise-level companies (jaise Microsoft/Amazon) wala hai. Isme frontend, backend, aur database ek doosre se strongly "decoupled" (alag) hain!
+This enterprise-grade architecture ensures that the frontend, backend, database, and external services are strictly decoupled, allowing for high scalability and maintainability.
