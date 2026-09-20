@@ -14,7 +14,7 @@ builder.AddWebServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (true) // Force database initialization in Production (Render) too
 {
     await app.InitialiseDatabaseAsync();
 }
