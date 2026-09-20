@@ -13,14 +13,12 @@ builder.AddWebServices();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (true) // Force database initialization in Production (Render) too
+// Always initialize database for SQLite (so it works on Render)
+await app.InitialiseDatabaseAsync();
+
+// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+if (!app.Environment.IsDevelopment())
 {
-    await app.InitialiseDatabaseAsync();
-}
-else
-{
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -37,7 +35,6 @@ app.MapScalarApiReference();
 
 app.UseExceptionHandler(options => { });
 
-
 app.MapDefaultEndpoints();
 app.MapEndpoints(typeof(Program).Assembly);
 app.MapHub<CodeArena.Web.Hubs.SubmissionHub>("/hubs/submission");
@@ -45,5 +42,3 @@ app.MapHub<CodeArena.Web.Hubs.SubmissionHub>("/hubs/submission");
 app.MapFallbackToFile("index.html");
 
 app.Run();
-
-
